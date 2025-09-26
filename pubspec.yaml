@@ -1,7 +1,7 @@
+name: darb_saed
+description: اپ کنترل درب خانه سعید
+publish_to: "none"
 
-name: darb_saeed
-description: درب خانه سعید - کنترل درب با ESP8266
-publish_to: 'none'
 version: 1.0.0+1
 
 environment:
@@ -10,15 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.6
-  shared_preferences: ^2.0.15
-  vibration: ^1.7.4
+  cupertino_icons: ^1.0.8
+  http: ^1.2.0
+  shared_preferences: ^2.2.2
+  fluttertoast: ^8.2.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^2.0.3
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/door_icon.png
+    - assets/
