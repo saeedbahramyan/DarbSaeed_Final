@@ -5,18 +5,14 @@ workflows:
     environment:
       flutter: stable
     scripts:
-      - name: Ensure flutter project structure
+      - name: Ensure flutter project structure (always run)
         script: |
-          if [ ! -d "android" ]; then
-            echo "android folder missing — running flutter create . to generate platform folders"
-            flutter create .
-          else
-            echo "android folder exists"
-          fi
+          echo "Running flutter create . to ensure android/ exists and correct config"
+          flutter create .
       - name: Get packages
         script: |
           flutter pub get
-      - name: Build APK
+      - name: Build APK (release)
         script: |
           flutter build apk --release
     artifacts:
